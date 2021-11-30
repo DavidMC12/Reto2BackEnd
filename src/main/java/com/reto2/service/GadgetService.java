@@ -43,18 +43,26 @@ public class GadgetService {
                     accesoryDb.get().setCategory(accesory.getCategory());
                 }
 
+                if (accesory.getName() != null) {
+                    accesoryDb.get().setName(accesory.getName());
+                }
+
                 if (accesory.getDescription() != null) {
                     accesoryDb.get().setDescription(accesory.getDescription());
                 }
+
                 if (accesory.getPrice() != 0.0) {
                     accesoryDb.get().setPrice(accesory.getPrice());
                 }
+
                 if (accesory.getQuantity() != 0) {
                     accesoryDb.get().setQuantity(accesory.getQuantity());
                 }
+
                 if (accesory.getPhotography() != null) {
                     accesoryDb.get().setPhotography(accesory.getPhotography());
                 }
+
                 accesoryDb.get().setAvailability(accesory.isAvailability());
                 clotheRepository.update(accesoryDb.get());
                 return accesoryDb.get();
